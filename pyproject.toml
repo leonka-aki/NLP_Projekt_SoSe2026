@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pawsx-project"
+version = "0.1.0"
+description = "Deutsche Paraphrasenerkennung: klassische NLP-Verfahren vs. Transformer (PAWS-X)"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy",
+    "scikit-learn>=1.3",
+    "datasets>=2.19",
+    "pyarrow",
+    "sentence-transformers>=2.7",
+    "transformers>=4.40",
+    "torch>=2.2",
+    "matplotlib",
+    "seaborn",
+    "jupyter",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
